@@ -1,0 +1,8 @@
+{
+  "name": "lolinfo",
+  "version": "1.0.0",
+  "description": "Site com informações de campeões do jogo League of Legends.",
+  "main": "index.html",
+  "author": "Draggio",
+  "license": "MIT"
+}

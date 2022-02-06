@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOLInfo</title>
+
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./css/reset.css" />
+
+  <!-- Arquivo de estilo principal -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <main class="mainPage">
+    <aside class="champions">
+      <!-- Esse aqui é um formulário -->
+      <form class="champions--search">
+        <input type="text" name="champion" placeholder="Buscar campeão" />
+        <button type="submit">Buscar</button>
+      </form>
+      <!-- Fim do formulário -->
+      <div class="champions--list">
+        <ul>
+        </ul>
+      </div>
+    </aside>
+    <aside class="info">
+      <div>
+        <button class="close">
+          Fechar
+        </button>
+        <div class="info--banner"></div>
+        <h1 class="info--name"></h1>
+        <h2 class="info--title"></h2>
+        <p class="info--lore"></p>
+      </div>
+    </aside>
+  </main>
+
+  <script type="text/javascript" src="./js/script.js"> </script>
+</body>
+
+</html>

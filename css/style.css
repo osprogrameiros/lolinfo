@@ -1,0 +1,209 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+.mainPage {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainPage > * {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.champions {
+  background-color: #2a3146;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.champions.is__contracted {
+  width: 50%;
+}
+
+.champions--search {
+  width: 95%;
+  display: flex;
+  max-width: 533px;
+  margin-bottom: 35px;
+}
+
+.champions--search input {
+  width: 80%;
+  max-width: 425px;
+  height: 44px;
+  padding: 0px;
+  margin-right: 16px;
+  padding-left: 16px;
+  background-color: #f5f0f0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+.champions--search input::placeholder {
+  color: #949494;
+}
+
+.champions--search button {
+  width: 20%;
+  font-size: 16px;
+  max-width: 92px;
+  background-color: #f5f0f0;
+  border: none;
+  border-radius: 5px;
+  height: 44px;
+}
+
+.champions--list {
+  width: 95%;
+  max-width: 533px;
+  height: 535px;
+  overflow: auto;
+}
+.champions--list ul {
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.champions--list ul::after {
+  content: '';
+  flex: auto;
+}
+
+.champions--list::-webkit-scrollbar {
+  display: none;
+}
+
+.champions--list__item {
+  margin-bottom: 25px;
+  margin: 6px;
+}
+
+.champions--list__item span {
+  width: 158px;
+  height: 148px;
+  display: block;
+  border: 3px solid #f5f0f0;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: ease all 0.3s;
+}
+
+.champions--list__item span.is__active {
+  border: 3px solid #f4a63a;
+}
+
+.champions--list__item span:hover {
+  border: 3px solid #f4a63a;
+  transition: unset;
+}
+
+.info {
+  background-color: #f4a63a;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 100px 0px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.info > div {
+  width: 90%;
+  max-width: 600px;
+}
+.info > div > * {
+  width: 100%;
+  margin: 0px;
+  margin-bottom: 24px;
+}
+
+.info--banner {
+  height: 281px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 13px;
+  border: 5px solid #2a3146;
+}
+
+.info--name {
+  font-weight: bolder;
+  font-size: 64px;
+  color: #2a3146;
+}
+
+.info--title {
+  font-weight: bolder;
+  font-size: 24px;
+  color: #2a3146;
+  text-decoration: underline;
+}
+
+.info--lore {
+  color: #2a3146;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0px;
+  line-height: 25px;
+}
+
+.close {
+  display: none;
+}
+
+@media only screen and (max-width: 1120px) {
+  .champions {
+    position: unset;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+  .champions.is__contracted {
+    width: 100%;
+  }
+  .info {
+    position: fixed;
+    left: 100%;
+    padding: 0px;
+    width: 100%;
+    overflow: auto;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .info.is__active {
+    left: 0%;
+  }
+  .info > div {
+    position: relative;
+    padding: 100px 0px;
+  }
+  .champions--list {
+    height: auto;
+  }
+  .close {
+    width: 100px !important;
+    display: block;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+}
